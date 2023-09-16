@@ -24,3 +24,19 @@ class BankAccount:
 name=input("Enter Account Holder name :")
 accno=int(input("Enter Account Number :"))
 accbal=float(input("Enter Current Balance :"))
+
+a=BankAccount(name,accno,accbal)
+print(" 1.Deposite Ammount \n 2.Withdraw Ammount \n 3.Check Balance \n 4.Exit")
+n=int(input("Please Enter any choice :"))
+if(n==1):
+      amount=float(input("Enter Deposite amount :"))
+      a.deposite(amount)
+elif(n==2):
+    wamount=float(input("Enter Withdraw Amount :"))
+    a.withdraw(wamount)
+elif(n==3):
+    a.checkbalance()
+elif(n==4):
+    print("Thankyou for visiting....")
+else:
+    print("Sorry wrong choice.......")
